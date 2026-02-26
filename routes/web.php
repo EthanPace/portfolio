@@ -17,3 +17,7 @@ Route::get('/projects', function () {
 Route::get('/resume', function () {
     return view('resume');
 })->name('resume');
+
+Route::get('/login', [\App\Http\Controllers\SessionController::class, 'create'])->name('login');
+Route::post('/sessions', [\App\Http\Controllers\SessionController::class, 'store']);
+Route::delete('/sessions', [\App\Http\Controllers\SessionController::class, 'destroy']);

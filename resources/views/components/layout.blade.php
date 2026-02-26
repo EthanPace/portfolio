@@ -13,7 +13,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
     <body class="flex bg-gray-800">
-        <x-nav/>
+        <x-nav />
         <div class="flex-1 flex flex-col gap-4 p-6 h-screen overflow-scroll">
             {{ $slot }}
         </div>
