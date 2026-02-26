@@ -20,12 +20,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Blade::directive('internal', function() {
-            return "<?php if (Auth::check()): ?>";
-        });
-
-        Blade::directive('endinternal', function() {
-            return "<?php endif; ?>";
-        });
+        //
     }
 }

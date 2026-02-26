@@ -7,10 +7,10 @@
         
         <x-h.item>Laravel / PHP Development</x-h.item>
         <x-b.text>Experience with building and maintaining web applications using the Laravel framework, including database design, API development, and front-end integration.</x-b.text>
-@internal
+@auth
         <x-h.item>Playwright Test Automation</x-h.item>
         <x-b.text>Proficient in using Playwright for end-to-end testing, including test script development, test execution, and reporting.</x-b.text>
-@endinternal
+@endauth
 
 
         <x-h.section>Projects</x-h.section>
@@ -20,10 +20,10 @@
         
         <x-h.item>Personal Portfolio Website</x-h.item>
         <x-b.text>Designed and implemented a personal portfolio website to showcase projects and skills, using Laravel for the back-end and Tailwind CSS for styling.</x-b.text>
-@internal
+@auth
         <x-h.item>Playwright Repo</x-h.item>
         <x-b.text>Created a repository of E2E Playwright test scripts and utilities for the QA team, demonstrating best practices for test automation and providing resources for the testing community.</x-b.text>
-@endinternal
+@endauth
 
 
         <x-h.section>Experience</x-h.section>
