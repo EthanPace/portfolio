@@ -4,7 +4,7 @@ use App\Models\Task;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect()->route('home');
+    return redirect()->route('projects');
 });
 
 Route::get('/home', function () {
