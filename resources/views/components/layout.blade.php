@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        @vite(['resources/css/app.css'])
     </head>
     <body class="flex bg-gray-800">
         <x-nav />

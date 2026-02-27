@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'ips' => array_filter(explode(', ', env('INTERNAL_IPS', ''))),
+    'gh' => env('INTERNAL_GH', 'github.com'),
 ];

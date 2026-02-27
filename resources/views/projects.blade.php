@@ -1,4 +1,6 @@
 <x-layout>
+    <x-h.title>Projects</x-h.title>
+
     <x-card.carousel>
         <x-slot:heading>LARAVEL</x-slot:heading>
 
@@ -16,15 +18,15 @@
 
     </x-card.carousel>
 
-    @auth
+@auth
     <x-card.carousel>
         <x-slot:heading>TYPESCRIPT</x-slot:heading>
 
-        <x-card.image :src="asset('images/placeholder.png')"
+        <x-card.image :src="asset('images/playwright.png')"
             alt="Image of a GitHub repository for Playwright test scripts"
-            href="https://github.com/epace/playwright-scripts">
+            href="https://{{ config('internal.gh') }}/epace/qa-playwright-e2e">
             Playwright Scripts
         </x-card.image>
     </x-card.carousel>
-    @endauth
+@endauth
 </x-layout>

@@ -14,19 +14,26 @@
             <x-heroicon-o-document-text class="w-5 h-5 mr-2"/>
             Resume
         </x-nav.link>
+
+@auth 
+        <x-nav.link href="/tasks">
+            <x-heroicon-o-pencil-square class="w-5 h-5 mr-2"/>
+            Tasks
+        </x-nav.link>
+@endauth
     </div>
     
-    @guest
+@guest
     <x-nav.link href="/login">
         <x-heroicon-o-lock-open class="w-5 h-5 mr-2"/>
         Login
     </x-nav.link>
-    @endguest
+@endguest
 
-    @auth
+@auth
     <x-nav.post href="/sessions" method="DELETE">
         <x-heroicon-o-lock-closed class="w-5 h-5 mr-2"/>
         Logout
     </x-nav.post>
-    @endauth
+@endauth
 </nav>
