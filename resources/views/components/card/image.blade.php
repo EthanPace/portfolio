@@ -1,5 +1,5 @@
 @props(['src' => asset('images/placeholder.png'), 'alt' => 'a placeholder image', 'href' => '#'])
-<a class="h-[14rem] w-[25rem] bg-gray-700 rounded-3xl overflow-hidden relative border border-black"
+<a class="w-full sm:w-[25rem] bg-gray-700 rounded-3xl overflow-hidden relative border border-black"
     href="{{ $href }}">
     <img src="{{ $src }}" alt="{{ $alt }}" class="object-cover">
 
