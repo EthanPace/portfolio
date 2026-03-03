@@ -16,7 +16,7 @@
     </head>
     <body class="flex bg-gray-800">
         <x-nav />
-        <div class="flex-1 flex flex-col gap-4 p-6 h-screen overflow-scroll">
+        <div style="scrollbar-width: none;" class="flex-1 flex flex-col gap-4 p-6 h-screen overflow-scroll">
             {{ $slot }}
         </div>
     </body>
