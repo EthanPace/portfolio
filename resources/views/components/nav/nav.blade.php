@@ -15,16 +15,15 @@
             <h3 class="hidden sm:flex">Resume</h3>
         </x-nav.link>
 
+        <x-nav.link href="/stats">
+            <x-heroicon-o-chart-bar class="w-5 h-5 sm:mr-2"/>
+            <h3 class="hidden sm:flex">Stats</h3>
+        </x-nav.link>
+
 @auth 
         <x-nav.link href="/tasks">
             <x-heroicon-o-pencil-square class="w-5 h-5 sm:mr-2"/>
             <h3 class="hidden sm:flex">Tasks</h3>
-        </x-nav.link>
-
-
-        <x-nav.link href="/stats">
-            <x-heroicon-o-chart-bar class="w-5 h-5 sm:mr-2"/>
-            <h3 class="hidden sm:flex">Stats</h3>
         </x-nav.link>
 @endauth
     </div>

@@ -22,7 +22,7 @@ Route::get('/resume', function () {
     return view('resume');
 })->name('resume');
 
-Route::get('/stats', [StatsController::class, 'index'])->name('stats.index')->middleware('auth');
+Route::get('/stats', [StatsController::class, 'index']);
 
 Route::get('/login', [SessionController::class, 'create'])->name('login');
 Route::post('/sessions', [SessionController::class, 'store']);
