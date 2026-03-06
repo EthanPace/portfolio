@@ -1,4 +1,4 @@
-<div class="sm:w-[70%] bg-gray-700 rounded-lg text-white">
+<div class="sm:min-w-[75rem] max-w-[100rem] bg-gray-700 rounded-lg text-white">
     @if(request()->query('edit'))
         <form id="edit" action="/tasks/{{ request()->query('edit') }}" method="post">@csrf</form>
     @endif
