@@ -1,4 +1,4 @@
-<div class="sm:min-w-[75rem] max-w-[100rem] bg-gray-700 rounded-lg text-white">
+<div class="sm:min-w-[75rem] md:w-100% 2xl:max-w-[100rem] bg-gray-700 rounded-lg text-white">
     @if(request()->query('edit'))
         <form id="edit" action="/tasks/{{ request()->query('edit') }}" method="post">@csrf</form>
     @endif
@@ -23,12 +23,12 @@
     </table>
 
     <div class="flex w-full bg-gray-700 py-2 px-4 items-center justify-end">
-        <x-button.post action="/tasks/new" class="items-center">
-            <x-heroicon-o-plus class="w-5 h-5 text-green-300 hover:text-green-400 mt-1 mr-2"/>
+        <x-button.post action="/tasks/new" class="items-center" color="green">
+            <x-heroicon-o-plus class="w-5 h-5"/>
         </x-button.post>
     </div>
 </div>
 
 @if($errors->any())
-    {{ $errors }}
+    <p class="text-white">{{ $errors }}</p>
 @endif

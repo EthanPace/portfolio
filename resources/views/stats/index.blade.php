@@ -1,6 +1,6 @@
 <x-layout>
     <x-h.title>Stats</x-h.title>
-    <div class="grid grid-cols-7 gap-2 text-xs sm:min-w-[75rem] max-w-[100rem]">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-2 text-xs w-100% 2xl:max-w-[90rem]">
         @php 
             $start = $weather->first()->date;
             $startDay = $start->dayOfWeek === 0 ? 7 : $start->dayOfWeek;
