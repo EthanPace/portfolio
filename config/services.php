@@ -26,6 +26,7 @@ return [
 
     'stats' => [
         'days' => env('STATS_DAYS', 30),
+        'cache_hours' => (int) env('STATS_CACHE_HOURS', 12),
     ],
 
 ];

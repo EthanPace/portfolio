@@ -19,7 +19,7 @@ class GitHubService
 
     public function getCommits(): Collection
     {
-        return Cache::remember('data.commits', now()->addHours(12), function () {
+        return Cache::remember('data.commits', now()->addHours(config('services.stats.cache_hours')), function () {
             $since = Carbon::now()->subDays($this->days)->toDateString();
 
             $response = Http::withToken($this->token)
