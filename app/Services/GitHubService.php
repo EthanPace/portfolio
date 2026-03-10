@@ -20,7 +20,7 @@ class GitHubService
     public function getCommits(): Collection
     {
         return Cache::remember('data.commits', now()->addHours(config('services.stats.cache_hours')), function () {
-            $since = Carbon::now()->subDays($this->days)->toDateString();
+            $since = Carbon::now()->subDays($this->days + 1)->toDateString();
 
             $response = Http::withToken($this->token)
                 ->withHeaders(['Accept' => 'application/vnd.github.cloak-preview+json'])
