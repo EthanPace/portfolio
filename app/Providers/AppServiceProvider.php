@@ -18,12 +18,14 @@ class AppServiceProvider extends ServiceProvider
             token: config('services.github.token'),
             username: config('services.github.username'),
             days: config('services.stats.days'),
+            cache_hours: config('services.stats.cache_hours'),
         ));
 
         $this->app->bind(OpenMeteoService::class, fn() => new OpenMeteoService(
             latitude: config('services.weather.lat'),
             longitude: config('services.weather.lon'),
             days: config('services.stats.days'),
+            cache_hours: config('services.stats.cache_hours'),
         ));
     }
 

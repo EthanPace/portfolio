@@ -14,12 +14,13 @@ class GitHubService
         private readonly string $token,
         private readonly string $username,
         private readonly int $days,
+        private readonly int $cache_hours,
     )
     {}
 
     public function getCommits(): Collection
     {
-        return Cache::remember('data.commits', now()->addHours(config('services.stats.cache_hours')), function () {
+        return Cache::remember('data.commits', now()->addHours($this->cache_hours), function () {
             $since = Carbon::now()->subDays($this->days + 1)->toDateString();
 
             $response = Http::withToken($this->token)

@@ -14,11 +14,12 @@ class OpenMeteoService
         private readonly float $longitude,
         private readonly float $latitude,
         private readonly int $days,
+        private readonly int $cache_hours,
     ) {}
 
     public function getWeather(): Collection
     {
-        return Cache::remember('data.weather', now()->addHours(config('services.stats.cache_hours')), function () 
+        return Cache::remember('data.weather', now()->addHours($this->cache_hours), function () 
         {
             $response = Http::get('https://archive-api.open-meteo.com/v1/era5', [
                 'latitude' => $this->latitude,
